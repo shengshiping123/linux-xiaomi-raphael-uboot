@@ -42,8 +42,7 @@
    - 选择 "构建系统镜像" 工作流
    - 点击 "Run workflow"
    - 选择系统类型：
-       - `debian-desktop`：Debian 桌面版
-       - `debian-server`：Debian 服务器版
+      
        - `ubuntu-desktop`：Ubuntu 桌面版
        - `ubuntu-server`：Ubuntu 服务器版
    - 内核版本号：
@@ -88,11 +87,11 @@
 adb reboot bootloader
 
 # 2. 刷入 boot 镜像
-fastboot flash cache xiaomi-k20pro-boot.img
+fastboot flash esp xiaomi-k20pro-boot.img
 fastboot flash boot u-boot.img
 
 # 3. 刷入系统镜像（需要先解压 rootfs.7z）
-fastboot flash userdata rootfs.img
+fastboot flash linux rootfs.img
 
 # 4. 擦除dtbo分区
 fastboot erase dtbo
