@@ -88,7 +88,7 @@
 adb reboot bootloader
 
 # 2. 刷入 boot 镜像
-fastboot flash cache xiaomi-k20pro-boot.img
+fastboot flash esp xiaomi-k20pro-boot.img
 fastboot flash boot u-boot.img
 
 # 3. 刷入系统镜像（需要先解压 rootfs.7z）
